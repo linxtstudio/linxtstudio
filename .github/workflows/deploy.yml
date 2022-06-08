@@ -24,8 +24,4 @@ jobs:
             sudo docker rm linxtstudio-landing-page
             sudo docker run -d -p 20000:3000 --name linxtstudio-landing-page linxtstudio/landing-page
             sudo docker image prune -f
-            
-      - name: Notifying discord webhook that deployment has been done successfully
-        with:
-          script: |
             curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST -d @discord.json ${{ secrets.DISCORD_WEBHOOK }}
