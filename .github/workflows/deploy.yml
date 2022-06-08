@@ -30,6 +30,6 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         uses: Ilshidur/action-discord@0.3.2
         with:
-          args: 'Merge Request Dari Branch ${{ github.head_ref }} Dengan Message ${{ github.event.commits[0][message] }} Berhasil Di Deploy.'
+          args: 'Merge Request Dari Branch ${{ github.head_ref }} Dengan Message ${{ github.event.commits[0]["message"] }} Berhasil Di Deploy.'
         
 
