@@ -26,10 +26,6 @@ jobs:
             sudo docker image prune -f
             
       - name: Notifying discord webhook that deployment has been done successfully
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
-        uses: Ilshidur/action-discord@0.3.2
         with:
-          args: 'Merge Request Dari Branch ${{ github.head_ref }} Dengan Message ${{ github.event.commits[0].message }} Berhasil Di Deploy.'
-        
-
+          script: |
+            curl -i -H "Accept: application/json" -H "Content-Type:application/json" -X POST -d @discord.json ${{ secrets.DISCORD_WEBHOOK }}

@@ -1,0 +1,33 @@
+{
+    "embeds": [{
+        "title": "Landing Page Pipeline",
+        "description": "Berhasil Deploy Project Linxt Studio Landing Page",
+        "url": "https://github.com/linxtstudio/linxtstudio",
+        "color": 2895667,
+        "provider": {
+            "name": "Linxt Studio",
+            "url": "https://github.com/linxtstudio/linxtstudio"
+        },
+        "fields": [{
+                "name": "Source Branch",
+                "value": "${{ github.head_ref }}",
+                "inline": true
+            },
+            {
+                "name": "Target Branch",
+                "value": "${{ github.base_ref }}",
+                "inline": true
+            },
+            {
+                "name": "Author",
+                "value": "${{ github.event.commits[0]['author']['name'] }}",
+                "inline": false
+            },
+            {
+                "name": "Commit Message",
+                "value": "${{ github.event.commits[0]['message'] }}",
+                "inline": false
+            }
+        ]
+    }]
+}
