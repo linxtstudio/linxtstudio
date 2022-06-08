@@ -27,5 +27,4 @@ jobs:
             curl --location --request POST ${{ secrets.DISCORD_WEBHOOK }} \
             --header 'Accept: application/json' \
             --header 'Content-Type: application/json' \
-            --header 'Cookie: __dcfduid=d0a4610ec17011ec9f4dd62042431c85; __sdcfduid=d0a4610ec17011ec9f4dd62042431c85ed313225b75c32b3e67e485b68e0df95002206f783f87c3b5ab8c89ede4eb5a5' \
-            --data-raw '{"embeds": [{"title": "Landing Page Pipeline","description": "Berhasil Deploy Project Linxt Studio Landing Page","url": "https://github.com/linxtstudio/linxtstudio","color": 2895667,"provider": {"name": "Linxt Studio","url": "https://github.com/linxtstudio/linxtstudio"},"fields": [{"name": "Source Branch","value": "${{ github.head_ref }}","inline": true},{"name": "Target Branch","value": "${{ github.base_ref }}","inline": true},{"name": "Author","value": "${{ github.event.commits[0].author.name }}","inline": false},{"name": "Commit Message","value": "${{ github.event.commits[0].message }}","inline": false}]}]}'
+            --data '{"content":"Berhasil deploy code terbaru dari branch main <@&949976437266464788>","allowed_mentions":{"roles":["949976437266464788"]}}'
