@@ -1,0 +1,31 @@
+---
+import { Image } from "astro:assets";
+import GridPattern from "./ui/GridPattern.astro";
+
+import linxtLogo from "../assets/linxt.svg";
+import pegadaianLogo from "../assets/featured-clients/pegadaian.svg";
+import geonetLogo from "../assets/featured-clients/geonet.png";
+import sanLogo from "../assets/featured-clients/san.svg";
+---
+
+<section class="flex justify-center w-full pt-4">
+    <GridPattern />
+    <div class="flex flex-col max-w-screen-xl py-32 px-8 gap-8">
+        <div class="flex flex-col gap-6 items-center justify-center text-center">
+            <Image class="mb-2" src={linxtLogo} alt="Linxt Studio" width="160" height="40" />
+            <h2 class="text-2xl leading-8 sm:text-4xl sm:leading-12 lg:text-7xl lg:leading-24 font-semibold text-neutral-900 ">Redefining the Art of <br><b class="font-extrabold">Digital Problem-Solving</b></h2>
+            <p class="text-neutral-700 max-w-120">Linxt lets you elevate your digital impact with cutting-edge tech and superior user experience</p>
+            <a href="#" class="flex items-center justify-center text-sm font-medium px-6 py-3 border rounded-full border-primary-500 text-neutral-900 hover:bg-primary-500 hover:text-white transition-colors">
+                Our Works
+            </a>
+        </div>
+        <div class="flex flex-col gap-8">
+            <h3 class="text-lg font-bold text-neutral-900 text-center md:text-left">Featured Clients</h3>
+            <div class="flex justify-center md:justify-start gap-8 items-center flex-wrap">
+                <Image class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-[filter,opacity]" src={pegadaianLogo} alt="Pegadaian" width="120" height="40" />
+                <Image class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-[filter,opacity]" src={geonetLogo} alt="Geonet" width="140" height="20" />
+                <Image class="grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-[filter,opacity]" src={sanLogo} alt="Social Arisan Nyok!" width="80" height="80" />
+            </div>
+        </div>
+    </div>
+</section>
