@@ -9,7 +9,7 @@ import sanLogo from "../assets/featured-clients/san.svg";
 import { Cog, Handshake, Users } from "lucide-astro";
 ---
 
-<section class="flex justify-center w-full pt-4">
+<section class="flex justify-center w-full pt-4 overflow-x-hidden">
     <GridPattern />
     <div class="flex flex-col w-full max-w-screen-xl py-32 px-16 gap-32">
         <div class="flex flex-col gap-6 items-center justify-center text-center">
@@ -22,7 +22,7 @@ import { Cog, Handshake, Users } from "lucide-astro";
         </div>
         <div class="flex flex-col gap-8">
             <h3 class="text-lg font-bold text-neutral-900 text-center md:text-left">Featured Clients</h3>
-            <div class="flex justify-center md:justify-start gap-x-16 gap-y-4 items-center flex-wrap">
+            <div class="flex justify-center md:justify-start gap-x-16 gap-y-4 items-center flex-col md:flex-row">
                 <Image class="grayscale hover:grayscale-0 opacity-75 hover:opacity-100 transition-[filter,opacity]" src={pegadaianLogo} alt="Pegadaian" width="128" height="128" />
                 <Image class="grayscale hover:grayscale-0 opacity-75 hover:opacity-100 transition-[filter,opacity]" src={geonetLogo} alt="Geonet" width="160" height="160" />
                 <Image class="grayscale hover:grayscale-0 opacity-75 hover:opacity-100 transition-[filter,opacity]" src={sanLogo} alt="Social Arisan Nyok!" width="80" height="80" />
@@ -37,7 +37,7 @@ import { Cog, Handshake, Users } from "lucide-astro";
                 <h2 class="text-3xl leading-12 font-semibold text-neutral-50 ">From Concept to Creation: Crafting Custom Solutions</h2>
                 <p class="text-neutral-100">At Linxt, we are passionate about solving problems and delivering results, and we are committed to delivering the very best in digital solutions.</p>
             </div>
-            <div class="flex gap-8">
+            <div class="flex flex-col md:flex-row gap-8">
                 <div class="flex flex-col gap-2 p-8 rounded-xl bg-white w-full max-w-80">
                     <Users />
                     <p class="text-lg font-bold text-neutral-900">Collaborative Approach</p>
@@ -51,7 +51,7 @@ import { Cog, Handshake, Users } from "lucide-astro";
                 <div class="flex flex-col gap-2 p-8 rounded-xl bg-white w-full max-w-80">
                     <Handshake />
                     <p class="text-lg font-bold text-neutral-900">Honesty as a Foundation</p>
-                    <p class="text-sm text-neutral-700">we always operate with transparency, integrity and a strong sense of ethics</p>
+                    <p class="text-sm text-neutral-700">We always operate with transparency, integrity and a strong sense of ethics</p>
                 </div>
             </div>
         </div>
