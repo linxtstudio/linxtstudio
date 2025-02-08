@@ -4,11 +4,12 @@
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "astro dev",
-		"build": "astro build",
+		"build": "astro check && astro build",
 		"preview": "astro preview",
 		"astro": "astro"
 	},
 	"dependencies": {
+		"@astrojs/ts-plugin": "^1.10.4",
 		"@fontsource-variable/commissioner": "^5.1.1",
 		"@tailwindcss/vite": "^4.0.3",
 		"astro": "^5.2.5",
